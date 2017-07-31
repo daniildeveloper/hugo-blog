@@ -1,0 +1,1 @@
+{"virtualbox":{"/var/www/hugo":{"guestpath":"/var/www/hugo","hostpath":"C:/Users/daniiltserin/workspace/I/blog","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/daniiltserin/workspace/I/blog","disabled":false,"__vagrantfile":true}}}

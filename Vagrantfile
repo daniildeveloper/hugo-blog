@@ -10,9 +10,17 @@ Vagrant.configure("2") do |config|
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
 
+  if Vagrant.has_plugin? "vagrant-vbguest"
+    config.vbguest.no_install = true
+    # disable auto update
+    config.vbguest.auto_update = false
+    config.vbguest.no_remote = true
+
+  end
+
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "ubuntu/artful64"
+  config.vm.box = "hashicorp/precise64"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -44,6 +52,8 @@ Vagrant.configure("2") do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   config.vm.synced_folder "./", "/var/www/hugo"
+  
+
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -55,7 +65,10 @@ Vagrant.configure("2") do |config|
   
     # Customize the amount of memory on the VM:
     vb.memory = "256"
+
   end
+
+
   #
   # View the documentation for the provider you are using for more
   # information on available options.
@@ -75,3 +88,5 @@ Vagrant.configure("2") do |config|
   #   apt-get install -y apache2
   # SHELL
 end
+
+
