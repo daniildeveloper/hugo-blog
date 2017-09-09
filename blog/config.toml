@@ -1,3 +1,5 @@
-baseurl = "http://replace-this-with-your-hugo-site.com/"
-languageCode = "en-us"
+baseurl = "http://daniilweb.gitub.io/blog/"
+languageCode = "ru-ru"
 title = "My Blog"
+theme = "nofancy"
+pygmentsStyle = "native"
